@@ -21,7 +21,9 @@ public class Main {
                     "4 - deposit balance" + "\n" +
                     "5 - withdraw balance" + "\n" +
                     "6 - view total balance" + "\n" +
-                    "7 - view total balance (positive and negative separately)" + "\n"
+                    "7 - view total balance (positive and negative separately)" + "\n" +
+                    "8 - block account" + "\n" +
+                    "9 -  unblock account" + "\n"
             );
             while (!sc.hasNext()) {
                 System.out.println("Enter task number:");
@@ -65,18 +67,18 @@ public class Main {
                     System.out.println("Enter identification number");
                     idNumber = sc.next();
                     System.out.println("Enter account number");
-                    acNumber = Integer.getInteger(sc.next());
+                    acNumber = sc.nextInt();
                     System.out.println("Enter value");
-                    value = Integer.getInteger(sc.next());
+                    value = sc.nextInt();
                     logic.deposit(idNumber, acNumber, value);
                     break;
                 case "5":
                     System.out.println("Enter identification number");
                     idNumber = sc.next();
                     System.out.println("Enter account number");
-                    acNumber = Integer.getInteger(sc.next());
+                    acNumber = sc.nextInt();
                     System.out.println("Enter value");
-                    value = Integer.getInteger(sc.next());
+                    value = sc.nextInt();
                     logic.withdraw(idNumber, acNumber, value);
                     break;
                 case "6":
@@ -89,6 +91,24 @@ public class Main {
                     idNumber = sc.next();
                     System.out.println("Positive balance is " + logic.getPositiveBalance(idNumber));
                     System.out.println("Negative balance is " + logic.getNegativeBalance(idNumber));
+                    break;
+                case "8":
+                    System.out.println("Enter identification number");
+                    idNumber = sc.next();
+                    System.out.println("Enter account number");
+                    acNumber = sc.nextInt();
+                    logic.blockAccount(idNumber, acNumber);
+                    System.out.println("Client" + logic.findClient(idNumber).getName() + " " +
+                            logic.findClient(idNumber).getSurname() + "account " + idNumber + " account is blocked");
+                    break;
+                case "9":
+                    System.out.println("Enter identification number");
+                    idNumber = sc.next();
+                    System.out.println("Enter account number");
+                    acNumber = sc.nextInt();
+                    logic.unblockAccount(idNumber, acNumber);
+                    System.out.println("Client" + logic.findClient(idNumber).getName() + " " +
+                            logic.findClient(idNumber).getSurname() + "account " + idNumber + " account is blocked");
                     break;
                 default:
                     System.out.println("Action is not resolved");

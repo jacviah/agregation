@@ -31,6 +31,15 @@ public class Client {
             }
         }
     }
+
+    public void blockAccount(int number, boolean block) {
+        for (Account i : accounts) {
+            if (number == i.getNumber()) {
+                i.setBlocked(block);
+            }
+        }
+    }
+
     public String getName() {
         return name;
     }

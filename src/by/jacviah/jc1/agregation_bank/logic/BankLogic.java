@@ -20,6 +20,16 @@ public class BankLogic {
         connection.getClient(clientNumber).updateBalance(accountNumber, -value);
     }
 
+    public void blockAccount(String clientNumber, int accountNumber) {
+        Bank connection = Bank.getInstance();
+        connection.getClient(clientNumber).blockAccount(accountNumber, true);
+    }
+
+    public void unblockAccount(String clientNumber, int accountNumber) {
+        Bank connection = Bank.getInstance();
+        connection.getClient(clientNumber).blockAccount(accountNumber, false);
+    }
+
     public void addClient(String name, String surname, String number) {
         Bank connection = Bank.getInstance();
         connection.addClient(name, surname,number);
