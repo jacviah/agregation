@@ -8,7 +8,7 @@ public class Client {
     private String name;
     private String surname;
     private String identificationNumber;
-    private HashSet<Account> accounts = new HashSet<Account>();
+    private HashSet<Account> accounts = new HashSet<>();
     private int accountNumber;
 
 

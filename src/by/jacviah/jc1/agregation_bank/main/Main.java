@@ -26,7 +26,7 @@ public class Main {
                     "9 -  unblock account" + "\n"
             );
             while (!sc.hasNext()) {
-                System.out.println("Enter task number:");
+                System.out.println("Enter action:");
                 sc.next();
             }
             String number = sc.next();
