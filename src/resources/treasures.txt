@@ -1,0 +1,11 @@
+Demantoid Garnet|3300|SMALL
+Pink Star|1200000|BIG
+Padparadscha Sapphire|8000|SMALL
+Jadeite|20000|MIDDLE
+Red Beryl|10000|MIDDLE
+Benitoite|3800|SMALL
+Blue Diamond|3930000|BIG
+Black Opal|3500|SMALL
+Alexandrite|12000|MIDDLE
+Taaffeite|2500|SMALL
+Musgravite|35000|MIDDLE
