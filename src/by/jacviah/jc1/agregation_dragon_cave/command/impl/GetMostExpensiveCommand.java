@@ -14,8 +14,7 @@ public class GetMostExpensiveCommand implements Command {
     public String execute(String[] params) throws Exception {
         ServiceProvider provider = ServiceProvider.getInstance();
         Treasure t = provider.getCaveService().getMostExpensive();
-        String result = "";
-        result += "name: " + t.getName() + ", price: " + t.getPrice() + ", size: " + t.getSize() + ";\n";
+        String result += "name: " + t.getName() + ", price: " + t.getPrice() + ", size: " + t.getSize() + ";\n";
         return result;
     }
 }
