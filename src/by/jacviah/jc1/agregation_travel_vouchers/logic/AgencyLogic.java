@@ -18,11 +18,6 @@ public class AgencyLogic {
         return new ClientLogic(client);
     }
 
-
-    public void exit(ClientLogic logic) {
-        logic = null;
-    }
-
     public void addClient(String name, String surname, String password) {
         TravelAgency agency = TravelAgency.getInstance();
         agency.addClient(name, surname, password);
