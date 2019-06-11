@@ -15,7 +15,7 @@ public class Main {
         init();
         AgencyLogic agencyLogic = new AgencyLogic();
 
-/*      test search
+/*      search
 
         SearchParameters param1 = new SearchParameters(VoucherType.MEDICAL_TOUR, 900, 1100, null,null,null);
         List<Voucher> list1 = agencyLogic.findVoucher(param1);
@@ -29,7 +29,7 @@ public class Main {
         ClientLogic clientLogic = agencyLogic.authorization("Vaclav", "pass1");
         System.out.println("booking number 8");
 
-        //booking test
+        //booking
         SearchParameters param3 = new SearchParameters(VoucherType.MEDICAL_TOUR, null,null,9, new Date(2019, 6, 16),Transport.AIRPLANE);
         List<Voucher> list3 = agencyLogic.findVoucher(param3);
         list3 = agencyLogic.findVoucher(param3);
