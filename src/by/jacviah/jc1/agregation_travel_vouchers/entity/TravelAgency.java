@@ -3,7 +3,7 @@ package by.jacviah.jc1.agregation_travel_vouchers.entity;
 import java.util.*;
 
 public class TravelAgency {
-    public static TravelAgency instance = new TravelAgency();
+    public static final TravelAgency instance = new TravelAgency();
 
     Set<Client> clients = new HashSet<>();
     Map<Voucher, Integer> vouchers = new HashMap<>();
