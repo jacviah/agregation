@@ -9,7 +9,7 @@ public class Bank {
 
     private static Bank instance = new Bank();
 
-    private HashMap<String, Client> clients = new HashMap<>();
+    private Map<String, Client> clients = new HashMap<>();
     private Set<String> clientNumbers = new HashSet<>();
 
     private Bank() {
