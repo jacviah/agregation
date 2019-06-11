@@ -4,14 +4,12 @@ import by.jacviah.jc1.agregation_dragon_cave.command.Command;
 import by.jacviah.jc1.agregation_dragon_cave.entity.Treasure;
 import by.jacviah.jc1.agregation_dragon_cave.service.ServiceProvider;
 
+import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by jacviah on 11.06.2019.
- */
 public class FindTreasuresForAAmountCommand implements Command {
     @Override
-    public String execute(String[] params) throws Exception {
+    public String execute(String[] params) throws IOException {
         ServiceProvider provider = ServiceProvider.getInstance();
         List<Treasure> list = provider.getCaveService().getTreasuresForAGivenAmount(Integer.valueOf(params[1]));
         String result = "";

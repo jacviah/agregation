@@ -2,10 +2,6 @@ package by.jacviah.jc1.agregation_dragon_cave.view;
 
 import by.jacviah.jc1.agregation_dragon_cave.controller.Controller;
 
-
-/**
- * Created by jacviah on 10.06.2019.
- */
 public class Main  {
     public static void main(String[] args) throws Exception {
         Controller controller = new Controller();

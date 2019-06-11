@@ -5,14 +5,14 @@ import by.jacviah.jc1.agregation_dragon_cave.entity.Size;
 import by.jacviah.jc1.agregation_dragon_cave.entity.Treasure;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class FileCaveDAO implements CaveDAO {
     @Override
-    public List<Treasure> getAll() throws Exception {
+    public List<Treasure> getAll() throws IOException {
         FileReader fr = new FileReader("src/resources/treasures.txt");
         Scanner scan = new Scanner(fr);
         List<Treasure> result = new ArrayList<>();
@@ -27,9 +27,4 @@ public class FileCaveDAO implements CaveDAO {
         fr.close();
         return result;
     }
-
-   /* @Override
-    public Treasure getTreasure() {
-        return null;
-    }*/
 }

@@ -7,9 +7,6 @@ import by.jacviah.jc1.agregation_dragon_cave.command.impl.ViewAllCommand;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by jacviah on 11.06.2019.
- */
 public class CommandProvider {
     private Map<String, Command> commands = new HashMap<String, Command>();
 

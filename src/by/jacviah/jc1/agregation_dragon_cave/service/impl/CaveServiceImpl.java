@@ -5,6 +5,8 @@ import by.jacviah.jc1.agregation_dragon_cave.dao.DAOProvider;
 import by.jacviah.jc1.agregation_dragon_cave.entity.Treasure;
 import by.jacviah.jc1.agregation_dragon_cave.service.CaveService;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
  */
 public class CaveServiceImpl implements CaveService {
     @Override
-    public Treasure getMostExpensive() throws Exception {
+    public Treasure getMostExpensive() throws IOException {
         DAOProvider provider = DAOProvider.getInstance();
         CaveDAO caveDAO = provider.getCaveDAO();
         List<Treasure> all = caveDAO.getAll();
@@ -29,7 +31,7 @@ public class CaveServiceImpl implements CaveService {
     }
 
     @Override
-    public List<Treasure> getTreasuresForAGivenAmount(int amount) throws Exception {
+    public List<Treasure> getTreasuresForAGivenAmount(int amount) throws IOException {
         DAOProvider provider = DAOProvider.getInstance();
         CaveDAO caveDAO = provider.getCaveDAO();
         List<Treasure> all = caveDAO.getAll();
@@ -60,7 +62,7 @@ public class CaveServiceImpl implements CaveService {
     }
 
     @Override
-    public List<Treasure> getAll() throws Exception {
+    public List<Treasure> getAll() throws IOException {
         DAOProvider provider = DAOProvider.getInstance();
         CaveDAO caveDAO = provider.getCaveDAO();
         return caveDAO.getAll();
