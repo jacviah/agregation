@@ -16,7 +16,7 @@ public class Controller {
         try {
             response = command.execute(params);
         } catch (IOException e) {
-            System.out.println("Resource file not found");
+            response = "Resource file not found";
         }
         return response;
     }
